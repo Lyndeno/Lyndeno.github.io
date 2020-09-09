@@ -8,4 +8,4 @@ title: About
 # MIT License
 ---
 
-> **Note**: Add Markdown syntax content to file `tabs/about.md` and it will show up on this page.
+I am an Electrical Engineering student at the University of Alberta. I am currently in my fourth year focusing on digital electronics. I also help people with their computer and technology issues when I have time.
