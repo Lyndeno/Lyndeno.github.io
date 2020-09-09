@@ -13,9 +13,7 @@ title: Lyndon Sanche                          # the main title
 tagline: BSc. Electrical Engineering Student at the University of Alberta  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, portfolio, sidebar,
-  bootstrap Jekyll theme with responsive web design
-  and focuses on text presentation.
+  Personal Website of Lyndon Sanche
 
 # Replace with the website url, e.g. 'https://username.github.io'
 url: 'https://lyndeno.ca'
