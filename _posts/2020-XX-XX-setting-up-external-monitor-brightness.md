@@ -98,3 +98,25 @@ I follow the instructions layed out [here](https://lexruee.ch/setting-i2c-permis
 ```console
 # echo 'KERNEL=="i2c-[0-9]*", GROUP="i2c"' >> /etc/udev/rules.d/10-local_i2c_group.rules
 ```
+
+4. Reboot and test it out.
+
+When I attempt to change the brightness command again as a non-root user, it is now successful.
+
+Now it is time to implement the shortcuts into Sway.
+
+## Setting Up Sway Shortcuts
+
+This part is quick and easy. I wanted to be able to hold the Windows key and press F11 or F12 to adjust brightness, so this is what I put into my Sway config:
+
+```
+### Brightness Controls ###
+bindsym $mod+F12 exec ddcutil --bus 5 setvcp 10 + 10
+bindsym $mod+F11 exec ddcutil --bus 5 setvcp 10 - 10
+bindsym ctrl+$mod+F12 exec ddcutil --bus 5 setvcp 10 100
+bindsym ctrl+$mod+F11 exec ddcutil --bus 5 setvcp 10 0
+```
+
+You can see I have also added the same combos, but with the control key added as I wanted a way to quickly make the monitor the brightest or darkest as possible.
+
+And that's it! Enjoy your new DIY brightness controls for your external monitor.
