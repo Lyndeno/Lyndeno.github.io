@@ -77,3 +77,24 @@ $ ddcutil --bus 5 setvcp 10 - 5
 Open failed for /dev/i2c-5: errno=EACCES(13): Permission denied
 No monitor detected on I2C bus /dev/i2c-5
 ```
+
+## Permitting user access to ```/dev/i2c-*```
+I follow the instructions layed out [here](https://lexruee.ch/setting-i2c-permissions-for-non-root-users.html). Here is a summary:
+
+1. Create group ```i2c```:
+
+```console
+# groupadd i2c
+```
+
+2. Add your user to ```i2c``` group:
+
+```console
+# usermod -aG i2c lsanche
+```
+
+3. Create a udev rule to make the changes permanent:
+
+```console
+# echo 'KERNEL=="i2c-[0-9]*", GROUP="i2c"' >> /etc/udev/rules.d/10-local_i2c_group.rules
+```
