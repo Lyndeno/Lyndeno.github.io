@@ -1,8 +1,8 @@
 ---
 title: Setting up External Monitor Brightness Controls on Arch Linux
-date: 2020-XX-XX 13:25:00 -0600
-categories: [Announcements]
-tags: [announcement]     # TAG names should always be lowercase
+date: 2020-10-29 16:30:00 -0600
+categories: [Tutorials Linux]
+tags: [tutorial linux computer]     # TAG names should always be lowercase
 pin: no
 ---
 
@@ -79,6 +79,7 @@ No monitor detected on I2C bus /dev/i2c-5
 ```
 
 ## Permitting user access to ```/dev/i2c-*```
+
 I follow the instructions layed out [here](https://lexruee.ch/setting-i2c-permissions-for-non-root-users.html). Here is a summary:
 
 1. Create group ```i2c```:
