@@ -1,8 +1,8 @@
 ---
 title: Setting up External Monitor Brightness Controls on Arch Linux
 date: 2020-10-29 16:30:00 -0600
-categories: [Tutorials Linux]
-tags: [tutorial linux computer]     # TAG names should always be lowercase
+categories: [Tutorials, Linux]
+tags: [tutorial, linux, computers]     # TAG names should always be lowercase
 pin: no
 ---
 
@@ -82,25 +82,25 @@ No monitor detected on I2C bus /dev/i2c-5
 
 I follow the instructions layed out [here](https://lexruee.ch/setting-i2c-permissions-for-non-root-users.html). Here is a summary:
 
-1. Create group ```i2c```:
+Create group ```i2c```:
 
 ```console
 # groupadd i2c
 ```
 
-2. Add your user to ```i2c``` group:
+Add your user to ```i2c``` group:
 
 ```console
 # usermod -aG i2c lsanche
 ```
 
-3. Create a udev rule to make the changes permanent:
+Create a udev rule to make the changes permanent:
 
 ```console
 # echo 'KERNEL=="i2c-[0-9]*", GROUP="i2c"' >> /etc/udev/rules.d/10-local_i2c_group.rules
 ```
 
-4. Reboot and test it out.
+Reboot and test it out.
 
 When I attempt to change the brightness command again as a non-root user, it is now successful.
 
