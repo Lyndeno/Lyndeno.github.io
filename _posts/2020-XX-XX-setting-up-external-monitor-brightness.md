@@ -68,8 +68,6 @@ Brightness can also be set relatively:
 
 lowers the brightness by 5. The ```-``` can be replaced with a ```+``` to increase the brightness instead.
 
-
-
 Now that we know the commands, we can now figure out how to bind the command to a shortcut in our display manager, which is Sway in my case.
 
 There is a problem: all the commands we have run require root access, we don't have access to ```/dev/i2c-5```.
