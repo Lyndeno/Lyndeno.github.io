@@ -18,7 +18,7 @@ Kernel 5.9 added improved I2C support to Navi 10 cards, which include the Radeon
 
 First we need to make sure that the ```i2c-dev``` module is loaded into the system; In my case, it was loaded automatically. We now want to identify the monitors:
 
-``` console
+```console
 # ddcutil detect
 Display 1
    I2C bus:             /dev/i2c-5
@@ -43,6 +43,39 @@ Display 2
 
 The monitor I am interested in is the LG QHD, with a bus number of 5. ```ddcutil``` can change various properties of connected monitors, we are only interested i brightness right now.
 
+We want to get current brightness value. We can use the ```ddcutil getvcp``` command to get our current value. The id for brightness is 10, so we can get our brightness value:
+
+```console
+# ddcutil --bus 5 getvcp 10
+VCP code 0x10 (Brightness                    ): current value =   100, max value =   100
+```
+
+We can see that the range for the brightness on this monitor is 0 to 100.
+
 ### Adjusting Brightness
 
-We can change the 
+We can change the brightness by using the ```ddcutil setvcp``` command. We also need to use the ```--bus``` parameter to specify which monitor we want to adjust. For example, to set the brightness to 50:
+
+```console
+# ddcutil --bus 5 setvcp 10 50
+```
+
+Brightness can also be set relatively:
+
+```console
+# ddcutil --bus 5 setvcp 10 - 5
+```
+
+lowers the brightness by 5. The ```-``` can be replaced with a ```+``` to increase the brightness instead.
+
+
+
+Now that we know the commands, we can now figure out how to bind the command to a shortcut in our display manager, which is Sway in my case.
+
+There is a problem: all the commands we have run require root access, we don't have access to ```/dev/i2c-5```.
+
+```console
+$ ddcutil --bus 5 setvcp 10 - 5
+Open failed for /dev/i2c-5: errno=EACCES(13): Permission denied
+No monitor detected on I2C bus /dev/i2c-5
+```
