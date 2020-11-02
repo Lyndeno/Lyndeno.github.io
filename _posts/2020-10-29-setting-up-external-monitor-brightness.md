@@ -10,7 +10,7 @@ This will be the first technical post on my website. I will use this post to des
 
 ## Background
 
-Kernel 5.9 added improved I2C support to Navi 10 cards[^kernelfootnote], which include the Radeon RX 5600XT. Using I2C in combination with [ddcutil](https://www.archlinux.org/packages/community/x86_64/ddcutil/) can allow us to control an external monitors brightness using commands.
+Kernel 5.9 added improved I2C support to Navi 10 cards[^kernel-footnote], which include the Radeon RX 5600XT. Using I2C in combination with [ddcutil](https://www.archlinux.org/packages/community/x86_64/ddcutil/) can allow us to control an external monitors brightness using commands.
 
 ## Using ddcutil
 
@@ -122,4 +122,4 @@ You can see I have also added the same combos, but with the control key added as
 
 And that's it! Enjoy your new DIY brightness controls for your external monitor.
 
-[^kernelfootnote]: Commit adding this support can be found [here](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=1bc734759f284eb531dd474c72ce59874649a254).
+[^kernel-footnote]: Commit adding this support can be found [here](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=1bc734759f284eb531dd474c72ce59874649a254).
