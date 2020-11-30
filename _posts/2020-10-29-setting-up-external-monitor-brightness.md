@@ -4,7 +4,6 @@ date: 2020-10-29 16:30:00 -0600
 categories: [Tutorials, Linux]
 tags: [tutorial, linux, computers]     # TAG names should always be lowercase
 pin: no
-featured_img: /assets/img/headshot.jpg
 ---
 
 This will be the first technical post on my website. I will use this post to describe the process in setting up external brightness control in Sway on Arch Linux.
