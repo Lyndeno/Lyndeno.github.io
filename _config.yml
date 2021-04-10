@@ -20,7 +20,7 @@ url: 'https://lyndeno.ca'
 
 author: Lyndon Sanche                  # change to your full name
 
-avatar: /assets/img/headshot.jpg   # support internet resources
+avatar: https://github.com/Lyndeno.png   # support internet resources
 
 github:
   username: Lyndeno             # change to your github username
