@@ -3,7 +3,9 @@
 #  https://github.com/cotes2020/jekyll-theme-chirpy
 #  © 2020 Cotes Chung
 #  MIT Licensed
-
+-
+  icon: 'fas fa-file'
+  url: 'https://github.com/Lyndeno/resume/releases/latest/download/lsanche.pdf'
 -
   type: github
   icon: 'fab fa-github-alt'

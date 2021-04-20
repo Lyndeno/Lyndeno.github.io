@@ -15,3 +15,5 @@ I am an Electrical Engineering student at the University of Alberta. I am curren
 | University Email | [lsanche@ualberta.ca](mailto:lsanche@ualberta.ca) |
 | Tech Help Email | [tech@lyndeno.ca](mailto:tech@lyndeno.ca) |
 | Other | [lsanche@lyndeno.ca](mailto:lsanche@lyndeno.ca) |
+
+Access my latest resume [here](https://github.com/Lyndeno/resume/releases/latest/download/lsanche.pdf).
